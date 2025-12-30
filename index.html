@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Times Table Flashcards</title>
+
+  <!-- Link to external stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="app">
+    <h1>Times Table Flashcards</h1>
+    <div class="subtitle">From 3 to 12, excluding 10</div>
+
+    <div class="controls">
+      <div class="controls-group">
+        <label for="table-select">Table:</label>
+        <select id="table-select"></select>
+      </div>
+
+      <div class="controls-group">
+        <button id="prev-btn">Previous</button>
+        <button id="next-btn">Next</button>
+      </div>
+
+      <div class="controls-group">
+        <button id="shuffle-btn">Shuffle deck</button>
+        <button id="reset-order-btn">Reset order</button>
+      </div>
+    </div>
+
+    <div class="card-wrapper">
+      <div id="card" class="card">
+        <div class="front-face">
+          <div class="question" id="question"></div>
+          <div class="hint">Tap to reveal the answer</div>
+        </div>
+
+        <div class="back-face">
+          <div class="answer" id="answer"></div>
+          <div class="hint">Tap to go back</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-row">
+      <span>Card <strong id="card-index">1</strong> / <span id="card-total">12</span></span>
+      <span>Current table: <strong id="current-table-label">3</strong></span>
+    </div>
+
+    <div class="deck-empty" id="deck-empty" style="display:none;">
+      No cards found. Check your settings.
+    </div>
+  </div>
+
+  <!-- External JS -->
+  <script src="script.js"></script>
+</body>
+</html>
